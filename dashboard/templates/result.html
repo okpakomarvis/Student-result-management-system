@@ -8,15 +8,21 @@
         </div>
         <h4 style="text-align:right"><a href="{% url 'dashboard:pdf' id=object.id %}" target="_blank">Save as PDF</a></h4>
         <div class="container" id="marksheet">
+            <p>
+                <b>Registration Number : </b> {{ object.select_student.student_matric_no | safe }}
+            </p>
             
             <p>
-                <b>Student Name     : </b>  {{ object.select_student.student_name | safe }}
-            </p>
-            <p>student_course
-                <b>Student Class    : </b>  {{ object.select_class.class_name }}   ( <b>{{ object.select_class.section | safe }}</b> )
+                <b>Full Name     : </b>  {{ object.select_student.student_name | safe }}
             </p>
             <p>
-                <b>Student Matric No : </b> {{ object.select_student.student_matric_no | safe }}
+                <b> Department   : </b>  {{ object.select_class.class_name }}   ( <b>{{ object.select_class.section | safe }}</b> )
+            </p>
+            <p>
+                <b>Programme : </b> {{ object.select_student.student_programme | safe }}
+            </p>
+            <p>
+                <b>Level : </b> {{ object.select_student.student_level | safe }}
             </p>
             <h2 class="text-center text-primary">Mark Sheet</h2>
             

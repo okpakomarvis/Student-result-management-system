@@ -15,6 +15,8 @@ class Student(models.Model):
     student_matric_no = models.IntegerField(unique=True)
     student_email = models.EmailField()
     student_gender = models.CharField(max_length=8, choices=select_gender)
+    student_programme=models.CharField(max_length=200)
+    student_level=models.IntegerField()
     student_course = models.ForeignKey(StudentClass, on_delete=models.CASCADE)
     student_date_of_birth = models.DateField()
     student_reg = models.DateField(auto_now_add=True, auto_now=False)

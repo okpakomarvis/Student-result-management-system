@@ -23,7 +23,7 @@ class StudentCreateView(LoginRequiredMixin, CreateView):
 class StudentListView(LoginRequiredMixin, ListView):
     model = Student
     field_list = [
-        'Student Name', 'Matric No', 'Course', 'Reg Date', 'Date of birth'
+        'Student Name', 'Matric No', 'Student Gender','Student Programme','student level','Course', 'Reg Date', 'Date of birth'
     ]
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
