@@ -11,6 +11,8 @@ class StudentForm(forms.ModelForm):
             'student_matric_no'  :   forms.NumberInput(attrs={'class':'form-control'}),
             'student_email'  :   forms.EmailInput(attrs={'class':'form-control'}),
             'student_gender'  :   forms.Select(attrs={'class':'form-control'}),
+            'student_programme'  :   forms.TextInput(attrs={'class':'form-control'}),
+            'student_level'  :   forms.NumberInput(attrs={'class':'form-control'}),
             'student_course'  :   forms.Select(attrs={'class':'form-control'}),
             'student_date_of_birth'  :   forms.DateInput(attrs={'class':'form-control'}),
         }
