@@ -12,7 +12,7 @@ class Student(models.Model):
     )
 
     student_name = models.CharField(max_length=100)
-    student_matric_no = models.IntegerField(unique=True)
+    student_matric_no = models.CharField(max_length=200,unique=True)
     student_email = models.EmailField()
     student_gender = models.CharField(max_length=8, choices=select_gender)
     student_programme=models.CharField(max_length=200)

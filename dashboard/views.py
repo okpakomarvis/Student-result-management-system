@@ -55,7 +55,7 @@ def find_result_view(request):
     if request.method == "POST":
         data = request.POST
         # data = json.loads(form)
-        roll = int(data['rollid'])
+        roll = data['rollid']
         pk = int(data['class'])
         clss = get_object_or_404(DeclareResult, pk=pk)
         if clss.select_student.student_matric_no == roll:

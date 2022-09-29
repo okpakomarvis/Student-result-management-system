@@ -8,7 +8,7 @@ class StudentForm(forms.ModelForm):
         exclude = ['student_reg']
         widgets = {
             'student_name'  :   forms.TextInput(attrs={'class':'form-control'}),
-            'student_matric_no'  :   forms.NumberInput(attrs={'class':'form-control'}),
+            'student_matric_no'  :   forms.TextInput(attrs={'class':'form-control'}),
             'student_email'  :   forms.EmailInput(attrs={'class':'form-control'}),
             'student_gender'  :   forms.Select(attrs={'class':'form-control'}),
             'student_programme'  :   forms.TextInput(attrs={'class':'form-control'}),
