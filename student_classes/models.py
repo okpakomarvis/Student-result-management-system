@@ -3,9 +3,9 @@ from django.urls import reverse
 # Create your models here.
 
 class StudentClass(models.Model):
-    class_name              =   models.CharField(max_length=200, help_text='Eg- Third, Fouth,Sixth etc')
-    class_name_in_numeric   =   models.IntegerField(help_text='Eg- 1,2,4,5 etc') 
-    section                 =   models.CharField(max_length=100, help_text='Eg- A,B,C etc')
+    class_name              =   models.CharField(max_length=200, help_text='Eg- Computer science, Education etc')
+    class_code              =   models.CharField(max_length=100, help_text='Eg- csc etc') 
+    section                 =   models.CharField(max_length=100, help_text='Eg- first-semester, second-semester etc')
     creation_date           =   models.DateTimeField(auto_now=False, auto_now_add=True)
 
     def get_absolute_url(self):
